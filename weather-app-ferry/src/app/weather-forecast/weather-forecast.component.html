@@ -1,5 +1,5 @@
     <div class="search">
-      <input type="text" placeholder="Search for location"#searchInput><button (click)="onSearchClick(searchInput.value)">Go</button>
+      <input type="text" placeholder="Search for location"#searchInput><button (click)="onClick(searchInput.value)">Go</button>
     </div>
     <div class="location">
       <h2>{{loc.features[0].place_name}}</h2>
@@ -119,7 +119,7 @@
         </li>
         <li>
           <div class="daily-item">
-            <h3>Thu 30</h3>
+            <h3>{{dayday[1]}}</h3>
             <span class="icon">
               <img src="http://openweathermap.org/img/wn/{{for.daily[1].weather[0].icon}}@2x.png" />
               <i class="span-color"><img src="../assets/img/water_drop_white_8x8.svg" class="droplet" />{{for.daily[1].dew_point | number: '1.0-0'}}%</i>
@@ -130,7 +130,7 @@
         </li>
         <li>
           <div class="daily-item">
-            <h3>Fri 30</h3>
+            <h3>{{dayday[2]}}</h3>
             <span class="icon">
               <img src="http://openweathermap.org/img/wn/{{for.daily[2].weather[0].icon}}@2x.png" />
               <i class="span-color"><img src="../assets/img/water_drop_white_8x8.svg" class="droplet" />{{for.daily[2].dew_point | number: '1.0-0'}}%</i>
@@ -141,7 +141,7 @@
         </li>
         <li>
           <div class="daily-item">
-            <h3>Sat 31</h3>
+            <h3>{{dayday[3]}}</h3>
             <span class="icon">
               <img src="http://openweathermap.org/img/wn/{{for.daily[3].weather[0].icon}}@2x.png" />
               <i class="span-color"><img src="../assets/img/water_drop_white_8x8.svg" class="droplet" />{{for.daily[3].dew_point | number: '1.0-0'}}%</i>
@@ -152,7 +152,7 @@
         </li>
         <li>
           <div class="daily-item">
-            <h3>Sun 1</h3>
+            <h3>{{dayday[4]}}</h3>
             <span class="icon">
               <img src="http://openweathermap.org/img/wn/{{for.daily[4].weather[0].icon}}@2x.png" />
               <i class="span-color"><img src="../assets/img/water_drop_white_8x8.svg" class="droplet" />{{for.daily[4].dew_point | number: '1.0-0'}}%</i>
@@ -163,7 +163,7 @@
         </li>
         <li>
           <div class="daily-item">
-            <h3>Mon 2</h3>
+            <h3>{{dayday[5]}}</h3>
             <span class="icon">
               <img src="http://openweathermap.org/img/wn/{{for.daily[5].weather[0].icon}}@2x.png" />
               <i class="span-color"><img src="../assets/img/water_drop_white_8x8.svg" class="droplet" />{{for.daily[5].dew_point | number: '1.0-0'}}%</i>
